@@ -12,6 +12,9 @@ jobs:
   test:
     environment: testing
     runs-on: ubuntu-latest
+    # This specifies that the job will run inside a container based on the official Node.js 16 Docker image.
+    container:
+      image: node:16
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.eg5w1.mongodb.net
